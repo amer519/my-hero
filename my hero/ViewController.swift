@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var characterSelect: UIImageView!
+    
+    let characters = [#imageLiteral(resourceName: "tiredeye"), #imageLiteral(resourceName: "pink"), #imageLiteral(resourceName: "deku"), #imageLiteral(resourceName: "bakugo"), #imageLiteral(resourceName: "todoroki")]
+    
+    
+    @IBAction func characterSwitch(_ sender: UIButton) {
+        
+        characterSelect.image = characters.randomElement()
     }
-
+    
+    
 
 }
 
